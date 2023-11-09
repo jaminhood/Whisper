@@ -9,18 +9,22 @@
 
   <body>
     <!-- <pop-up message box is here -->
-    <div class="box-message">
-      <form>
-        <label for="Message"></label>
-        <textarea name="message" rows="5" cols="30">
-Enter your message....</textarea
-        >
-      </form>
-    </div>
-    <!-- < send and reset buttons  -->
-    <div class="button">
-      <button>Send</button>
-      <button>Reset</button>
+    <div class="pop-up-container">
+      <div class="box-message">
+        <form>
+        <textarea name="text" id="text" placeholder="Enter your message..." rows="5" cols="30">
+        </textarea>
+        </form>
+      </div>
+      <!-- < send and reset buttons  -->
+      <div class="button">
+        <div class="send-btn">
+          <button>Send</button>
+        </div>
+        <div class="reset-btn">
+          <button>Reset</button>
+        </div>
+      </div>
     </div>
 
     <!---home page starts here-->
