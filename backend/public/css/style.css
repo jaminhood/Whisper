@@ -17,5 +17,6 @@ body {
 	color: whitesmoke;
 	display: grid;
 	place-content: center;
+	text-align: center;
 	padding: 1rem;
 }
