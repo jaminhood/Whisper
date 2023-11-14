@@ -7,6 +7,10 @@ router.get("^/$|/index(.html)?", (req, res) => {
 	res.sendFile(path.join(__dirname, "..", "views", "index.html"))
 })
 
+//TODO => get messages
+
+//TODO => send messages
+
 // render 404
 router.all("*", (req, res) => {
 	res.status(404)
