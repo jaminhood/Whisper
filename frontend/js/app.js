@@ -12,6 +12,10 @@ function toggleBtnForPopUp() {
     popUpContainer.style.display = "none";
     overlay.style.display = "none";
   });
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    popUpContainer.style.display = "none";
+  });
 }
 
 toggleBtnForPopUp();
