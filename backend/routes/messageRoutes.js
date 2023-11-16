@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const path = require("path")
+const { getMessages, postMessage } = require('../controller/messageController.js')
 
 // render index page
 router.get("^/$|/index(.html)?", (req, res) => {
@@ -8,8 +9,11 @@ router.get("^/$|/index(.html)?", (req, res) => {
 })
 
 //TODO => get messages
+router.get('/messages', getMessages)
+
 
 //TODO => send messages
+router.post('/messages', postMessage)
 
 // render 404
 router.all("*", (req, res) => {
