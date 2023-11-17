@@ -1,21 +1,23 @@
-function toggleBtnForPopUp() {
-  let openBtn = document.querySelector("#btn-el");
-  let closeBtn = document.querySelector(".xmark");
-  let popUpContainer = document.querySelector(".pop-up-container");
-  let overlay = document.querySelector("#overlay");
+let popUpContainer = document.querySelector(".pop-up-container");
+let messageBox = document.querySelector(".message-box");
+let sendMsgBtn = document.querySelector(".send-btn");
+let resetMsg = document.querySelector(".reset-btn");
+let closeMsgBtn = document.querySelector(".xmark");
+let writeMsgBtn = document.querySelector(".write-msg-btn");
+let overLay = document.querySelector("#overlay");
 
-  openBtn.addEventListener("click", () => {
-    popUpContainer.style.display = "block";
-    overlay.style.display = "block";
-  });
-  closeBtn.addEventListener("click", () => {
-    popUpContainer.style.display = "none";
-    overlay.style.display = "none";
-  });
-  overlay.addEventListener("click", () => {
-    overlay.style.display = "none";
-    popUpContainer.style.display = "none";
-  });
+function toggleBtnForPopUp() {
+  popUpContainer.style.display = "block";
+  overLay.style.display = "block";
+}
+function closeMessage() {
+  popUpContainer.style.display = "none";
+  overLay.style.display = "none";
+}
+function resetMessage() {
+  messageBox.value = "";
 }
 
-toggleBtnForPopUp();
+writeMsgBtn.addEventListener("click", toggleBtnForPopUp);
+resetMsg.addEventListener("click", resetMessage);
+closeMsgBtn.addEventListener("click", closeMessage);
