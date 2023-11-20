@@ -28,11 +28,16 @@ closeMsgBtn.addEventListener("click", closeMessage);
 // For Message Handling
 let messages = [];
 let output = "";
+const time = [];
 
 const renderMessages = () => {
   let msgOut = "";
 
-  messages.reverse().forEach((msg) => {
+  messages.reverse().forEach((msg, index) => {
+  //   console.log(time);
+  //   console.log(msg);
+  //   console.log(messages);
+
     msgOut += `<div class="preview">
     <div class="preview-image">
       <img src="./asset/images/message-box-img.jpeg" alt="" />
@@ -40,7 +45,7 @@ const renderMessages = () => {
     <div class="preview-add">
       <div class="preview-info">
         <h3>Anonymous</h3>
-        <span>${formatAMPM(new Date)}</span>
+        <span>${time[index]}</span>
       </div>
       <div class="para">
         <p>
@@ -59,6 +64,12 @@ const sendMsgToBackend = (e) => {
     message: msgWriteUp,
   };
   messages.push(newMsg);
+
+  let timevar = (formatAMPM(new Date))
+    time.unshift(timevar);
+    indtime = time[messages.length - 1];
+  // console.log(time.indexOf(timevar))
+
   renderMessages();
   resetMessage();
   closeMessage();
@@ -77,4 +88,4 @@ function formatAMPM(date) {
   return strTime;
   }
   
-  console.log(formatAMPM(new Date));
+  // console.log(formatAMPM(new Date));
