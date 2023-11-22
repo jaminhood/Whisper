@@ -2,7 +2,9 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const corsOptions = require("./config/corsOptions")
-require("dotenv").config()
+const { join } = require('path')
+require("dotenv").config({ path: join(__dirname, "..", ".env") })
+
 const path = require("path")
 const { errorHandler } = require('./middlewares/errorHandler.js')
 
