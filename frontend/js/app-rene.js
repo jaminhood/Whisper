@@ -9,13 +9,16 @@ let overLay = document.querySelector("#overlay");
 function toggleBtnForPopUp() {
   popUpContainer.style.display = "block";
   overLay.style.display = "block";
+  messageBox.focus();
 }
 function closeMessage() {
   popUpContainer.style.display = "none";
   overLay.style.display = "none";
+  messageBox.value = "";
 }
 function resetMessage() {
   messageBox.value = "";
+  messageBox.focus();
 }
 
 writeMsgBtn.addEventListener("click", toggleBtnForPopUp);
