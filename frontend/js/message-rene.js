@@ -8,9 +8,9 @@
 // the indicater(no of times ran) is smaller than or equal to
 //the arrayLength(no of messages in the array)
 
-indicater = 0;
+let indicater = 0;
 
-arrayLength = message.length;
+let arrayLength = message.length;
 // console.log(message.length)
 
 autoReload = () => {
@@ -34,8 +34,8 @@ autoReload();
 addDiv = () => {
   //this function adds a new div to the website with the new message on every call
   // UpdateInfo();
-  Xe = message[indicater];
-  Xe2 = time[indicater];
+  let Xe = message[indicater];
+ let Xe2 = time[indicater];
 
   document.querySelector(".heading").insertAdjacentHTML(
     "afterend", //still having little issue with
@@ -99,8 +99,8 @@ console.log(formatAMPM(new Date()));
 
 const sendMsgToBackend = (e) => {
   e.preventDefault();
-  newMessage = messageBox.value;
-  newTime = formatAMPM(new Date());
+  let newMessage = messageBox.value;
+  let newTime = formatAMPM(new Date());
 
   message.push(newMessage);
   time.push(newTime);
