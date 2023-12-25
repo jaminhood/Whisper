@@ -1,29 +1,7 @@
 const express = require("express")
 const router = express.Router()
-const path = require("path")
-const { getMessages, postMessage } = require("../controller/messageController.js")
+const messages = require("../controller/messageController")
 
-// render index page
-router.get("^/$|/index(.html)?", (req, res) => {
-	res.sendFile(path.join(__dirname, "..", "views", "index.html"))
-})
-
-// get messages
-router.get("/messages", getMessages)
-
-// send messages
-router.post("/messages", postMessage)
-
-// render 404
-router.all("*", (req, res) => {
-	res.status(404)
-	if (req.accepts("html")) {
-		res.sendFile(path.join(__dirname, "..", "views", "404.html"))
-	} else if (req.accepts("json")) {
-		res.json({ message: "404 Not Found" })
-	} else {
-		res.type("txt").send("404 Not Found")
-	}
-})
+router.route(`/`).get(messages.getMessages).post(messages.postMessage)
 
 module.exports = router
