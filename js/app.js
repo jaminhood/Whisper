@@ -27,21 +27,21 @@ writeMsgBtn.addEventListener("click", toggleBtnForPopUp)
 resetMsg.addEventListener("click", resetMessage)
 closeMsgBtn.addEventListener("click", closeMessage)
 
-export const formatDate = inputDate => {
-	const dateObject = new Date(inputDate)
+// export const formatDate = inputDate => {
+// 	const dateObject = new Date(inputDate)
 
-	if (isNaN(dateObject.getTime())) {
-		return "Invalid Date"
-	}
+// 	if (isNaN(dateObject.getTime())) {
+// 		return "Invalid Date"
+// 	}
 
-	const day = dateObject.getDate().toString().padStart(2, "0")
-	const month = (dateObject.getMonth() + 1).toString().padStart(2, "0") // Month is zero-based
-	const year = dateObject.getFullYear()
+// 	const day = dateObject.getDate().toString().padStart(2, "0")
+// 	const month = (dateObject.getMonth() + 1).toString().padStart(2, "0") // Month is zero-based
+// 	const year = dateObject.getFullYear()
 
-	const formattedDate = `${day} - ${month} - ${year}`
+// 	const formattedDate = `${day} - ${month} - ${year}`
 
-	return formattedDate
-}
+// 	return formattedDate
+// }
 
 const renderMessages = messages => {
 	let msgOut = ""
@@ -54,7 +54,7 @@ const renderMessages = messages => {
       <div class="preview-add">
         <div class="preview-info">
           <h3>Anonymous</h3>
-          <span>${formatDate(msg.createdAt)}</span>
+          <span>${new Date(msg.createdAt).toTimeString()}</span>
         </div>
         <div class="para">
           <p>
