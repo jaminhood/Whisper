@@ -27,21 +27,32 @@ writeMsgBtn.addEventListener("click", toggleBtnForPopUp)
 resetMsg.addEventListener("click", resetMessage)
 closeMsgBtn.addEventListener("click", closeMessage)
 
-// export const formatDate = inputDate => {
-// 	const dateObject = new Date(inputDate)
+function formatBackendDatetime(backendDatetimeString) {
+	// Create a Date object from the backend datetime string
+	const backendDatetime = new Date(backendDatetimeString)
 
-// 	if (isNaN(dateObject.getTime())) {
-// 		return "Invalid Date"
-// 	}
+	// Check if the Date object is valid
+	if (isNaN(backendDatetime.getTime())) {
+		// Handle invalid datetime
+		return "Invalid Datetime"
+	}
 
-// 	const day = dateObject.getDate().toString().padStart(2, "0")
-// 	const month = (dateObject.getMonth() + 1).toString().padStart(2, "0") // Month is zero-based
-// 	const year = dateObject.getFullYear()
+	// Options for formatting the date and time
+	const options = {
+		year: "numeric",
+		month: "short",
+		day: "numeric",
+		hour: "2-digit",
+		minute: "2-digit",
+		second: "2-digit",
+		hour12: false, // Use 24-hour format
+	}
 
-// 	const formattedDate = `${day} - ${month} - ${year}`
+	// Format the date and time using toLocaleString
+	const formattedDatetime = backendDatetime.toLocaleString(undefined, options)
 
-// 	return formattedDate
-// }
+	return formattedDatetime
+}
 
 const renderMessages = messages => {
 	let msgOut = ""
@@ -54,7 +65,7 @@ const renderMessages = messages => {
       <div class="preview-add">
         <div class="preview-info">
           <h3>Anonymous</h3>
-          <span>${new Date(msg.createdAt).toTimeString()}</span>
+          <span>${formatBackendDatetime(msg.createdAt)}</span>
         </div>
         <div class="para">
           <p>
