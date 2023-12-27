@@ -1,11 +1,11 @@
-let popUpContainer = document.querySelector(".pop-up-container")
-let messageBox = document.querySelector(".message-box")
-let sendMsgBtn = document.querySelector(".send-btn")
-let resetMsg = document.querySelector(".reset-btn")
-let closeMsgBtn = document.querySelector(".xmark")
-let writeMsgBtn = document.querySelector(".write-msg-btn")
-let overLay = document.querySelector("#overlay")
-let messageView = document.querySelector(".view-messages")
+const popUpContainer = document.querySelector(".pop-up-container")
+const messageBox = document.querySelector(".message-box")
+const sendMsgBtn = document.querySelector(".send-btn")
+const resetMsg = document.querySelector(".reset-btn")
+const closeMsgBtn = document.querySelector(".xmark")
+const writeMsgBtn = document.querySelector(".write-msg-btn")
+const overLay = document.querySelector("#overlay")
+const messageView = document.querySelector(".view-messages")
 
 const messagesURI = "https://whisper-backend-kdcz.onrender.com/api/v1/messages"
 
