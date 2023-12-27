@@ -1,0 +1,294 @@
+/* *  {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ /* Reset default margin and padding */
+body,
+h1,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+/* Set a background color and default font styles */
+body {
+	background: url("../asset/images/krystal-ng-O07o2Cd_vX0-unsplash.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	font-family: sans-serif;
+}
+/*blur background when the pop-up container appears */
+#overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+	backdrop-filter: blur(5px); /* adjust the blur amount */
+	z-index: 1;
+}
+
+/* Center the pop-up container on the screen */
+.pop-up-container {
+	display: none; /* Initially hidden */
+	position: fixed;
+	max-width: 900px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	border: none;
+	border-radius: 10px;
+	/*  padding: 30px;*/
+
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	z-index: 2;
+}
+/* style the xmark*/
+.xmark {
+	position: absolute;
+	left: 90%;
+	top: 20px;
+	background: #82939b;
+}
+
+/* style the main container */
+
+/* Style the text area in the pop-up */
+#text {
+	width: 300px;
+	height: 120px;
+	padding: 10px;
+	margin: 50px 20px 50px 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	outline: none;
+	resize: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+/* Style the send and reset buttons in the pop-up */
+.button {
+	background-color: #97736a;
+	display: flex;
+	justify-content: end;
+	gap: 1rem;
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 0 0 10px 10px;
+}
+
+h1 {
+	color: rgb(155, 15, 15);
+	font-size: 50px;
+	animation: treak 5s linear infinite;
+}
+.send-btn button,
+.reset-btn button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.send-btn button {
+	background-color: white;
+	color: black;
+}
+
+.reset-btn button {
+	background-color: #b14a4a;
+	color: #000;
+}
+
+/* Style the home page container */
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* Style the heading and "Write a message" button */
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+button {
+	background-color: #007bff;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+/* Style the message previews */
+.preview {
+	background-color: #82939b;
+	border: 1px solid #c22e2e;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 10px;
+	display: flex;
+	gap: rem;
+	/*  justify-content: center; */
+	align-items: center;
+}
+
+.preview-image img {
+	max-width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	margin-top: 20px;
+}
+.preview-info {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px;
+	margin-top: -10px;
+}
+.preview-info h3 {
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: rgb(155, 15, 15);
+}
+
+.preview-info span {
+	color: rgb(84, 3, 3);
+	font-size: 0.9rem;
+	margin-top: 20px;
+	padding-right: 10px;
+}
+
+.para {
+	padding-inline: 10px;
+	width: 100%;
+	color: #011208;
+}
+.para p {
+	margin: 0;
+	width: 90%;
+}
+
+.preview-add {
+	width: 100%;
+}
+.newpreview {
+	background-color: #82939b;
+	border: 1px solid #c22e2e;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 10px;
+	display: flex;
+	gap: rem;
+	/*  justify-content: center; */
+	align-items: center;
+}
+
+.newpreview-image img {
+	max-width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	margin-top: 20px;
+}
+.newpreview-info {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px;
+	margin-top: -10px;
+}
+.newpreview-info h3 {
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: rgb(155, 15, 15);
+}
+
+.newpreview-info span {
+	color: rgb(84, 3, 3);
+	font-size: 0.9rem;
+	margin-top: 20px;
+	padding-right: 10px;
+}
+.newpreview-add {
+	width: 100%;
+}
+
+@keyframes treak {
+	from {
+		transform: translate(0);
+	}
+	to {
+		transform: translate(100%);
+	}
+}
+
+/* Make the page responsive */
+@media screen and (max-width: 768px) {
+	.container {
+		padding: 20px;
+	}
+
+	/* .pop-up-container {
+        width: 300px;
+    } */
+	.heading {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	h1 {
+		color: rgb(155, 15, 15);
+		font-size: 45px;
+		animation: treak 5s linear infinite;
+	}
+	@keyframes treak {
+		from {
+			transform: translate(0);
+		}
+		to {
+			transform: translate(50%);
+		}
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.container {
+		padding: 10px;
+	}
+
+	/* .pop-up-container {
+        width: 300px;
+    } */
+	.heading {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	h1 {
+		color: rgb(155, 15, 15);
+		font-size: 40px;
+		animation: treak 5s linear infinite;
+	}
+	#text {
+		max-width: 250px;
+		height: 120px;
+		padding: 2px;
+		margin: 30px 20px 30px 20px;
+	}
+	.xmark {
+		position: absolute;
+		left: 88%;
+		top: 10px;
+		background: #82939b;
+	}
+}
+
+/* Additional responsive styles can be added as needed */
