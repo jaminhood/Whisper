@@ -156,14 +156,14 @@ button {
 .preview-info h3 {
 	font-weight: bold;
 	font-size: 1rem;
-	margin-bottom: 5px;
+	margin-block: 5px;
 	color: rgb(155, 15, 15);
 }
 
 .preview-info span {
 	color: rgb(84, 3, 3);
 	font-size: 0.9rem;
-	margin-top: 20px;
+	margin-block: 5px;
 	padding-right: 10px;
 }
 
