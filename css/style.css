@@ -234,7 +234,7 @@ button {
 }
 
 /* Make the page responsive */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 	.container {
 		padding: 20px;
 		height: 100vh;
@@ -263,7 +263,7 @@ button {
 	}
 }
 
-@media screen and (max-width: 414px) {
+@media (max-width: 414px) {
 	.container {
 		padding: 10px;
 	}
