@@ -19,7 +19,7 @@ body {
 	background-size: cover;
 	background-position: center center;
 	font-family: sans-serif;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 }
 /*blur background when the pop-up container appears */
 #overlay {
@@ -237,6 +237,8 @@ button {
 @media screen and (max-width: 768px) {
 	.container {
 		padding: 20px;
+		height: 100vh;
+		overflow-y: scroll;
 	}
 
 	/* .pop-up-container {
