@@ -1,25 +1,20 @@
-/* *  {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
- /* Reset default margin and padding */
-body,
-h1,
-p,
-ul {
-	margin: 0;
-	padding: 0;
-}
 /* Set a background color and default font styles */
+html,
+body {
+	min-height: 100vh;
+}
 body {
 	background: url("../asset/images/krystal-ng-O07o2Cd_vX0-unsplash.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 	font-family: sans-serif;
-	/* min-height: 100vh; */
 }
 /*blur background when the pop-up container appears */
 #overlay {
