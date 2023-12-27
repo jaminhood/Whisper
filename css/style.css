@@ -19,6 +19,7 @@ body {
 	background-size: cover;
 	background-position: center center;
 	font-family: sans-serif;
+	min-height: 100vh;
 }
 /*blur background when the pop-up container appears */
 #overlay {
