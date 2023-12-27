@@ -1,140 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whisper | Anonymous Messaging App</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <body>
-    <!-- this empty div produces the blur effect to the background when the 'write a message button is clicked'-->
-    <div id="overlay"></div>
-    <!-- <pop-up message box is here -->
-    <div class="pop-up-container">
-      <div class="box-message">
-        <img
-          src="/frontend/asset/images/xmark.svg"
-          alt=""
-          width="15px"
-          height="15px"
-          class="xmark"
-        />
-        <form>
-          <textarea class="message-box" name="text" id="text" placeholder="Enter your message"></textarea>
-          <div class="button">
-            <div class="send-btn">
-              <button type="submit">Send</button>
-            </div>
-            <div class="reset-btn">
-              <button type="reset">Reset</button>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whisper | Anonymous Messaging App</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- this empty div produces the blur effect to the background when the 'write a message button is clicked'-->
+  <div id="overlay"></div>
+  <!-- <pop-up message box is here -->
+  <div class="pop-up-container">
+    <div class="box-message">
+      <img src="./frontend/asset/images/xmark.svg" alt="" width="15px" height="15px" class="xmark" />
+      <form>
+        <textarea class="message-box" name="text" id="text" placeholder="Enter your message"></textarea>
+        <div class="button">
+          <div class="send-btn">
+            <button type="submit">Send</button>
           </div>
-        </form>
-      </div>
+          <div class="reset-btn">
+            <button type="reset">Reset</button>
+          </div>
+        </div>
+      </form>
     </div>
-    <!-- < send and reset buttons  -->
+  </div>
 
-    <!---home page starts here-->
-    <div class="container">
-      <div class="heading">
-        <h1>Anonymous</h1>
-          <button class="write-msg-btn">Write a message</button>
-          <!--changes here -->
-      </div>
+  <!---home page starts here-->
+  <div class="container">
+    <div class="heading">
+      <h1>Anonymous</h1>
+      <button class="write-msg-btn">Write a message</button>
+    </div>
+  </div>
 
-      <!-- <div class="preview">
-        <div class="preview-image">
-          <img src="./asset/images/message-box-img.jpeg" alt="" onclick="clicked()"  />
-        </div>
-        <div class="preview-add">
-          <div class="preview-info">
-            <h3>Anonymous</h3>
-            <span>9:12am</span>
-          </div>
-          <div class="para">
-            <p>
-              I am the guy who steals all of the candy from your desk drawer.
-              Can you please start buying chocolate biscuits too?
-            </p>
-          </div>
-        </div>
-      </div>
+  <script src="./js/app-rene.js"></script>
+  <script src="./js/message-rene.js"></script>
+</body>
 
-      <div class="preview">
-        <div class="preview-image">
-          <img src="./asset/images/message-box-img.jpeg" alt="" />
-        </div>
-        <div class="preview-add">
-          <div class="preview-info">
-            <h3>Anonymous</h3>
-            <span>11:00am</span>
-          </div>
-          <div class="para">
-            <p>
-              I am too shy to tell you this in person,but you're really hot. And
-              i really love everything about you.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="preview">
-        <div class="preview-image">
-          <img src="./asset/images/message-box-img.jpeg" alt="" />
-        </div>
-        <div class="preview-add">
-          <div class="preview-info">
-            <h3>Anonymous</h3>
-            <span>3:20pm</span>
-          </div>
-          <div class="para">
-            <p>
-              I was never interested in all of the whole tour thing before you
-              gave out your remark about it. You were the reason I changed my
-              mind.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="preview">
-        <div class="preview-image">
-          <img src="./asset/images/message-box-img.jpeg" alt="" />
-        </div>
-        <div class="preview-add">
-          <div class="preview-info">
-            <h3>Anonymous</h3>
-            <span>6:30pm</span>
-          </div>
-          <div class="para">
-            <p>
-              I have always wanted to meet you in person, however; I am not to
-              sure how to say it. Can we meet?
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="preview">
-        <div class="preview-image">
-          <img src="./asset/images/message-box-img.jpeg" alt="" />
-        </div>
-        <div class="preview-add">
-          <div class="preview-info">
-            <h3>Anonymous</h3>
-            <span>8:50pm</span>
-          </div>
-          <div class="para">
-            <p>
-              Look, I have every reason to believe you shouldn't marry Cynthia.
-              Just couldn't tell you to your face.
-            </p>
-          </div>
-        </div>
-      </div> -->
-
-    <script src="./js/app-rene.js"></script>
-    <script src="./js/message-rene.js"></script>
-  </body>
 </html>
