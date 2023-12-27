@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const apiUrl = "https://whisper-backend-kdcz.onrender.com/api/v1/messages";
 
 let message = [
@@ -7,12 +8,19 @@ let message = [
   },
 ];
 let time = ["Maiden Launch"];
+=======
+(message = [
+  "Hello anonymous friends! Welcome to our safe space. Feel free to share your thoughts, dreams, or anything on your mind. Remember, your identity is protected here. Let the conversations begin!",
+]),
+  (time = ["Maiden Launch"]);
+>>>>>>> 2d4084952160019a83bac2130fcc9eb2a9d0671a
 
 //Auto-Reload
 //this part tells the messages to reload every 1 sec as long as
 // the indicater(no of times ran) is smaller than or equal to
 //the arrayLength(no of messages in the array)
 
+<<<<<<< HEAD
 let indicater = message.length;
 
 let arrayLength = message.length;
@@ -21,6 +29,22 @@ const autoReload = () => {
   setInterval(() => {
     retrieveMsgs(apiUrl);
   }, 1000);
+=======
+indicater = 0;
+
+arrayLength = message.length;
+// console.log(message.length)
+
+autoReload = () => {
+  setInterval(
+    (Reload = () => {
+      if (indicater < arrayLength) {
+        addDiv();
+      }
+    }),
+    1000
+  );
+>>>>>>> 2d4084952160019a83bac2130fcc9eb2a9d0671a
 };
 autoReload();
 
@@ -30,6 +54,7 @@ autoReload();
 // console.log(Xe);
 // message = data.message;
 
+<<<<<<< HEAD
 let addDiv = (msg) => {
   let output = ``;
 
@@ -37,6 +62,14 @@ let addDiv = (msg) => {
   Xe = msg;
   Xe2 = time[indicater];
 
+=======
+addDiv = () => {
+  //this function adds a new div to the website with the new message on every call
+  // UpdateInfo();
+  Xe = message[indicater];
+  Xe2 = time[indicater];
+
+>>>>>>> 2d4084952160019a83bac2130fcc9eb2a9d0671a
   document.querySelector(".heading").insertAdjacentHTML(
     "afterend", //still having little issue with
     //loading them from the top.
@@ -60,7 +93,11 @@ let addDiv = (msg) => {
 `
   );
 
+<<<<<<< HEAD
   // indicater++;
+=======
+  indicater++;
+>>>>>>> 2d4084952160019a83bac2130fcc9eb2a9d0671a
 };
 
 //--------------------------------- part two ---------------------------------------------
@@ -79,6 +116,15 @@ function formatAMPM(date) {
 }
 
 console.log(formatAMPM(new Date()));
+<<<<<<< HEAD
+=======
+// timeUpdate= () => {
+//     timeNow = formatAMPM(new Date);
+//     // tiMenow = timeNow.getHours() + ":" + timeNow.getMinutes();
+//     // console.log(timeNow);
+//     timeR.push(timeNow);
+//     console.log(timeR);
+>>>>>>> 2d4084952160019a83bac2130fcc9eb2a9d0671a
 
 //----------------------------------- part two end ----------------------------------------
 
@@ -89,6 +135,7 @@ const sendMsgToBackend = (e) => {
   e.preventDefault();
   newMessage = messageBox.value;
   newTime = formatAMPM(new Date());
+<<<<<<< HEAD
 
   // message.push(newMessage);
   time.push(newTime);
@@ -112,6 +159,22 @@ const sendMsgToBackend = (e) => {
       console.log("Error:", error);
     });
 };
+=======
+
+  message.push(newMessage);
+  time.push(newTime);
+
+  addDiv();
+  closeMessage();
+  resetMessage();
+};
+//Xe = message[indicater];// i made Xe contain the message from the array
+// console.log(Xe);
+// console.log(data.message)
+
+// Xe2 = time[indicater];
+// indicater++;
+>>>>>>> 2d4084952160019a83bac2130fcc9eb2a9d0671a
 
 sendMsgBtn.addEventListener("click", sendMsgToBackend);
 
@@ -123,6 +186,7 @@ async function retrieveMsgs(apiUrl) {
     });
 }
 
+<<<<<<< HEAD
 function appendToBody(arr) {
   arr.forEach((element) => {
     addDiv(element);
@@ -130,3 +194,6 @@ function appendToBody(arr) {
 }
 
 //------------------------------------------To Actually connect with the backend-----------------------------
+=======
+// sendMsgBtn.addEventListener("click", sendFunction());
+>>>>>>> 2d4084952160019a83bac2130fcc9eb2a9d0671a
